@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_new/Helper.dart';
 
 
 void main(){
@@ -19,10 +21,16 @@ class HomePage extends StatelessWidget{
         appBar: new AppBar(
           title: new Text('Home'),
         ),
-        body: Padding(
-          padding: EdgeInsets.all(20.0),
-          child: new Text('This is our first flutter app.This is our first flutter app.This is our first flutter app.This is our first flutter app.This is our first flutter app. ',
-              textAlign: TextAlign.justify, style: TextStyle(color: Colors.green,fontSize: 15, fontStyle: FontStyle.italic)),
+        body: Container(
+          margin: EdgeInsets.only(left: 20,top: 20),
+          padding: EdgeInsets.all(20.0) ,
+          height: 80,
+          width: 200,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8),
+            color: Color(Helper.getHexToInt("#F1C40F"))
+          ),
+          child: Text('Hello Fluter', style: TextStyle(color: Colors.black,fontSize: 20),),
         )
       );
   }
