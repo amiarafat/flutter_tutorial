@@ -26,9 +26,10 @@ class HomePage extends StatelessWidget{
           padding: EdgeInsets.all(20.0) ,
           height: 80,
           width: 200,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8),
-            color: Color(Helper.getHexToInt("#F1C40F"))
+          foregroundDecoration: BoxDecoration(
+            image: DecorationImage(
+              image: NetworkImage("https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg")
+            )
           ),
           child: Text('Hello Fluter', style: TextStyle(color: Colors.black,fontSize: 20),),
         )
