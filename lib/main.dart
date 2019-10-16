@@ -21,18 +21,41 @@ class HomePage extends StatelessWidget{
         appBar: new AppBar(
           title: new Text('Home'),
         ),
-        body: Container(
-          margin: EdgeInsets.only(left: 20,top: 20),
-          padding: EdgeInsets.all(20.0) ,
-          height: 80,
-          width: 200,
-          foregroundDecoration: BoxDecoration(
-            image: DecorationImage(
-              image: NetworkImage("https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg")
+        body:
+        Column(
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.only(left: 20,top: 20),
+              padding: EdgeInsets.all(20.0) ,
+              height: 40,
+              width: 50,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Color(Helper.getHexToInt("#F1C40F"))
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 20,top: 20),
+              padding: EdgeInsets.all(20.0) ,
+              height: 40,
+              width: 50,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Color(Helper.getHexToInt("#F1C40F"))
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 20,top: 20),
+              padding: EdgeInsets.all(20.0) ,
+              height: 40,
+              width: 50,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Color(Helper.getHexToInt("#F1C40F"))
+              ),
             )
-          ),
-          child: Text('Hello Fluter', style: TextStyle(color: Colors.black,fontSize: 20),),
-        )
+          ],
+        ),
       );
   }
 }
