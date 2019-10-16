@@ -25,40 +25,11 @@ class HomePage extends StatelessWidget{
         appBar: new AppBar(
           title: new Text('Home'),
         ),
-        body: Column (children: <Widget>[
-          Image.asset("assets/images/image.jpg"),
-          Container(
-          child: Text(_longText,textAlign: TextAlign.justify,),
-            padding: EdgeInsets.all(20),
-          ),
-          Row(
-            children: <Widget>[
-              Container(
-                margin: EdgeInsets.only(left: 20,top: 20),
-                padding: EdgeInsets.all(5.0) ,
-                height: 40,
-                width: 50,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Color(Helper.getHexToInt("#F1C40F"))
-                ),
-                child: Icon(Icons.linked_camera),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 20,top: 20),
-                padding: EdgeInsets.all(5.0) ,
-                height: 40,
-                width: 50,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Color(Helper.getHexToInt("#F1C40F"))
-                ),
-                child: Icon(Icons.access_alarm),
-              ),
-            ],
-          ),
+        body:
+        ListView(children: <Widget>[
+          Text(_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText,)
         ],)
 
-      );
+    );
   }
 }
