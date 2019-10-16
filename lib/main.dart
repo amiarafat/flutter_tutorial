@@ -26,6 +26,7 @@ class HomePage extends StatelessWidget{
           title: new Text('Home'),
         ),
         body: Column (children: <Widget>[
+          Image.asset("assets/images/image.jpg"),
           Container(
           child: Text(_longText,textAlign: TextAlign.justify,),
             padding: EdgeInsets.all(20),
