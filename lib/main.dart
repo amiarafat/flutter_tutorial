@@ -3,27 +3,27 @@ import 'package:flutter/material.dart';
 
 void main(){
 
-  runApp(new MyApp());
+  runApp(MaterialApp(
+    title: 'My App',
+    home: HomePage(),
+  ));
 
 }
 
-class MyApp extends StatelessWidget{
-
+class HomePage extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
 
-    return new MaterialApp(
-      title: 'My App',
-      home: Scaffold(
-
+    return Scaffold(
         appBar: new AppBar(
           title: new Text('Home'),
         ),
-        body:    Center(
-          child: new Text('This is our first flutter app '),
-        ),
-      ),
-    );
+        body: Padding(
+          padding: EdgeInsets.all(20.0),
+          child: new Text('This is our first flutter app.This is our first flutter app.This is our first flutter app.This is our first flutter app.This is our first flutter app. ',
+              textAlign: TextAlign.justify, style: TextStyle(color: Colors.green,fontSize: 15, fontStyle: FontStyle.italic)),
+        )
+      );
   }
 }
