@@ -39,6 +39,21 @@ class HomePage extends StatelessWidget{
 
                 )
               ],
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            Text("Features",style: TextStyle(color: Colors.orange,fontSize: 20)),
+            SizedBox(
+              height: 100,
+                width: 100,
+              child: Container(
+
+                decoration: BoxDecoration(
+                  color: Colors.pink
+                ),
+
+              ),
             )
           ],
         )
