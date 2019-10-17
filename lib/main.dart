@@ -26,9 +26,22 @@ class HomePage extends StatelessWidget{
           title: new Text('Home'),
         ),
         body:
-        ListView(children: <Widget>[
-          Text(_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText,)
-        ],)
+        Column(
+          children: <Widget>[
+            Stack(
+              children: <Widget>[
+                
+                Image.asset("assets/images/image.jpg"),
+                Positioned(
+                  bottom: 40,
+                  left: 30 ,
+                  child: Text(_shortText,style: TextStyle(color: Colors.white,fontSize: 20)),
+
+                )
+              ],
+            )
+          ],
+        )
 
     );
   }
