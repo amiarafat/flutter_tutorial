@@ -45,19 +45,35 @@ class HomePage extends StatelessWidget{
             ),
             Text("Features",style: TextStyle(color: Colors.orange,fontSize: 20)),
             SizedBox(
-              height: 100,
-                width: 100,
-              child: Container(
+              height: 30,
 
-                decoration: BoxDecoration(
-                  color: Colors.pink
-                ),
+            ),
+            Row(children: <Widget>[
 
-              ),
-            )
+              _rowCall(),
+              _rowCall(),
+              _rowCall(),
+              _rowCall(),
+
+            ],
+            ),
           ],
         )
 
     );
+  }
+
+  Widget _rowCall(){
+
+    return Expanded(
+        child: Container (
+            height: 50,
+            width: 50,
+            decoration: BoxDecoration(color: Colors.red),
+            margin: EdgeInsets.only(right: 5,left: 5),
+          child: Icon(Icons.link,color: Colors.white,),
+        )
+    );
+
   }
 }
