@@ -15,24 +15,7 @@ void main(){
 class HomePage extends StatelessWidget{
 
   final _longText = "Hello Arafat. How are You? I am Fine.lakhdka hfka fah fgakcgkahckacash lahlf halh ahf jkafkahkjfhaj falhf ahf hah ";
-  final _shortText = "Hello Arafat.";
-
-  List people = [
-    {"name":"Arafat", "email":"arafat@gmail.com"},
-    {"name":"Brafat1", "email":"abcd@gmail.com"},
-    {"name":"Crafat2", "email":"efgh@gmail.com"},
-    {"name":"Drafat3", "email":"ijk@gmail.com"},
-    {"name":"Frafat4", "email":"lmn@gmail.com"},
-    {"name":"Hrafat5", "email":"opq@gmail.com"},
-    {"name":"Trafat6", "email":"rst@gmail.com"},
-    {"name":"Rrafat7", "email":"uvw@gmail.com"},
-    {"name":"Wrafat8", "email":"xyz@gmail.com"},
-    {"name":"Qrafat9", "email":"arafat@gmail.com"},
-    {"name":"Irafat10", "email":"arafat@gmail.com"},
-    {"name":"Orafat11", "email":"arafat@gmail.com"},
-    {"name":"Prafat12", "email":"arafat@gmail.com"},
-    {"name":"Mrafat13", "email":"arafat@gmail.com"},
-  ];
+  final _shortText = "Hello, Arafat.";
 
   @override
   Widget build(BuildContext context) {
@@ -41,23 +24,58 @@ class HomePage extends StatelessWidget{
         appBar: new AppBar(
           title: new Text('Home'),
         ),
-        body: ListView.builder(
-          itemCount: people.length,
-          itemBuilder: (BuildContext context, int index){
-            return Column(children: <Widget>[
-              ListTile(
-                leading: CircleAvatar(
-                  child: Text(people[index]["name"][0]),
-                ),
-                title: Text(people[index]["name"]),
-                subtitle: Text(people[index]["email"]),
-              )
+        drawer: Drawer(
+          child: ListView(children: <Widget>[
+                Stack(children: <Widget>[
 
-            ],);
-          },
+                  Image.asset("assets/images/image.jpg"),
+                  Positioned(
+                    left: 10,
+                    bottom: 50,
+                    child: Icon(Icons.person,color: Colors.white,size: 50,),
+                  ),
+                  Positioned(
+                    left: 10,
+                    bottom: 30,
+                    child: Text(_shortText,style: TextStyle(color: Colors.white),),
+                  )
+                ],
+              ),
+            SizedBox(
+              height: 30,
+            ),
+                ListTile(
+                  leading: Icon(Icons.mail),
+                  title: Text("Mail Box"),
+                ),
+                Divider(),
+                ListTile(
+                  leading: Icon(Icons.mic),
+                  title: Text("Records"),
+                ),
+                Divider(),
+                ListTile(
+                  leading: Icon(Icons.add_circle),
+                  title: Text("New Records"),
+                ),
+                Divider(),
+                ListTile(
+                  leading: Icon(Icons.build),
+                  title: Text("Sttings"),
+                ),
+            ],
+          ),
+        ),
+        body: Center(
+          child: Text(_shortText),
         )
     );
   }
+
+
+
+
+
 
   Widget _cell(){
 
