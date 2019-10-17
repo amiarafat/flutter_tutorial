@@ -27,12 +27,13 @@ class HomePage extends StatelessWidget{
         drawer: Drawer(
           child: ListView(children: <Widget>[
                 Stack(children: <Widget>[
-
                   Image.asset("assets/images/image.jpg"),
+
                   Positioned(
                     left: 10,
                     bottom: 50,
                     child: Icon(Icons.person,color: Colors.white,size: 50,),
+
                   ),
                   Positioned(
                     left: 10,
@@ -72,40 +73,4 @@ class HomePage extends StatelessWidget{
     );
   }
 
-
-
-
-
-
-  Widget _cell(){
-
-    return Row(
-      children: <Widget>[
-        Container(
-          //margin: EdgeInsets.only(bottom: 10),
-          width: 100,
-          height: 100,
-          decoration: BoxDecoration(color: Colors.teal),
-          child: Icon(Icons.lightbulb_outline,color: Colors.white,),
-        ),
-        SizedBox(
-          width: 10,
-        )
-      ],
-    );
-  }
-
-  Widget _tile(){
-
-    return ListTile(
-      leading: CircleAvatar(
-        child: Text("H"),
-      ),
-      title: Text("Hossain Arafat"),
-      subtitle: Text("New In Flutter"),
-      onTap: (){
-
-      },
-    );
-  }
 }
